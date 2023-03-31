@@ -1,0 +1,24 @@
+.spinner{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 5;
+    background: rgba(0,0,0,1);
+    display: grid;
+    place-content: center;
+    img{
+        opacity: 1;
+        animation: fade 1s ease-in-out infinite alternate;
+    }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}

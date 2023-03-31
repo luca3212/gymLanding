@@ -1,0 +1,33 @@
+.containMenu{
+    background: var(--bgDark);
+    width: 100%;
+
+    position: fixed;
+    z-index: 50;
+    top: 0;
+}
+
+.centerMenu{
+    max-width: 1150px;
+    margin: auto;
+    width: 90%;
+
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.infoMenu{
+    border: 2px solid var(--color-primary);
+    border-radius: 8px;
+    
+    p{
+        padding: 8px;
+        color: #fff;
+    }
+
+    
+}
+
+

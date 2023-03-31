@@ -1,0 +1,109 @@
+.containOfertas{
+    width: 100%;
+    padding: 50px 0;
+    background: var(--bgDark);
+}
+
+.titleSeccion{
+    max-width: 1150px;
+    margin: auto;
+    width: 90%;
+
+    h1{
+        font-size: 3.5rem;
+        margin-bottom: 100px ;
+    }
+    strong{
+        color: var(--color-primary);
+    }
+}
+
+.containCards{
+    max-width: 1150px;
+    margin: auto;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.cardOfertas{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+
+.cardOfertasAlternativa{
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-bottom: 80px;
+
+    .infoOferta{
+        align-items: flex-end;
+        text-align: right;
+    }
+
+    .videoOfertas{
+       
+        justify-content: flex-start;
+
+        &::before{
+            content: "";
+            position: absolute;
+            width: 80%;
+            height: 100%;
+            left: -20px;
+            top: -20px;
+            opacity: 1;
+            background-image: repeating-linear-gradient(135deg, var(--color-primary) 0px, var(--color-primary) 15px, transparent 0px, transparent 50%);
+            background-size: 44px 44px;
+            background-position: 0px 0px, 22px 22px;
+        }
+    }
+}
+
+.infoOferta{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+    h2{
+        font-size: 2.5rem;
+    }
+    p{
+        font-size: 1.2;
+        width: 90%;
+        max-width: 500px;
+        line-height: 1.8rem;
+    }
+}
+
+.videoOfertas{
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+
+    video{
+        max-width: 90%;
+        position: relative;
+        box-shadow: 0px 0px 8px 7px #0c0c0c;
+    }
+ 
+    &::before{
+        content: "";
+        position: absolute;
+        width: 80%;
+        height: 100%;
+        top: 20px;
+        right: -20px;
+        opacity: 1;
+        background-image: repeating-linear-gradient(135deg, var(--color-primary) 0px, var(--color-primary) 15px, transparent 0px, transparent 50%);
+        background-size: 44px 44px;
+        background-position: 0px 0px, 22px 22px;
+    }
+}

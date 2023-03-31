@@ -1,0 +1,104 @@
+.containPlanes{
+    width: 100%;
+   padding: 50px 0;
+   background: var(--bgDark);
+}
+
+.titleSeccion{
+    max-width: 1150px;
+    margin: auto;
+    width: 90%;
+
+    h1{
+        font-size: 3.5rem;
+        margin-bottom: 10px ;
+    }
+}
+
+.containCards{
+    max-width: 1150px;
+    margin: auto;
+    width: 90%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    
+    
+}
+
+.planes{
+    width: 100%;
+    border-bottom: 1px solid var(--greyDark);
+    
+    padding: 15px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 35px;
+
+    .titlePase{
+        width: 30%;
+        h2{
+            color: #111;
+            font-size: 10rem;
+        }
+    }
+    
+    .infoPlan{
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h2{
+            font-size: 3rem;
+            color: var(--greyDark);
+            
+        }
+        strong{
+            font-size: 10rem;
+        }
+        
+    }
+
+    .buttonPlan{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+
+        h2{
+            font-size: 4rem;
+        }
+        button{
+            border: none;
+            background: var(--color-primary);
+            width: 80%;
+            border-radius: 2px;
+            padding: 20px 0;
+            color: var(--bgDark);
+            font-weight: 700;
+            font-size: 1.5rem;
+            cursor: pointer;
+    
+            &:hover{
+                transform: translateY(2px);
+            }
+        }
+    
+        // .buttonPrimary{
+        //     background: var(--color-primary);
+        //     color: var(--bgDark);
+        //     font-weight: 500;
+        // }
+    }
+
+
+    &:last-child{
+        border: none;
+    }
+}
+

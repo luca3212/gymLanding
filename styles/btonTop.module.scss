@@ -1,0 +1,17 @@
+.top{
+    width: 45px;
+    height: 45px;
+    border-radius: 8px;
+    background: #202020;
+    padding: 8px;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    cursor: pointer;
+    display: none;
+    border:none
+}
+
+.visible{
+    display: block;
+}

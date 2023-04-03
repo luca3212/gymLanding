@@ -1,5 +1,4 @@
 import React from "react";
-// import Yoga from "../../public/vidGym/yoga.mp4";
 import styles from "../../styles/ofertas.module.scss";
 
 export default function Ofertas() {

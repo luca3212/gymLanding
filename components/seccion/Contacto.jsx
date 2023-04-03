@@ -1,45 +1,11 @@
 import React from "react";
 import styles from "../../styles/contacto.module.scss";
 import Link from "next/link";
-import Image from "next/image";
-import logo from "../../public/imgGym/logo.png";
+import LogoFull from "../logoFull";
+
 export default function Contacto() {
   return (
     <div className={styles.containContacto}>
-      <div className={styles.titleSeccion}>
-        <h2>Contacto</h2>
-      </div>
-
-      <div className={styles.containUbicacion}>
-        <div className={styles.containTexto}>
-          <div className={styles.containInfo}>
-            <h2>Ubicacion:</h2>
-            <p>Avenida 25 de mayo 1850, Villa Mercedes, San Luis.</p>
-
-            <h2>Telefono:</h2>
-            <p>11-65457823</p>
-
-            <h2>Email:</h2>
-            <p>TriforceClub@gmail.com</p>
-          </div>
-        </div>
-
-        <div className={styles.containForm}>
-          <form action="">
-            <label htmlFor="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre" />
-
-            <label htmlFor="telefono">Telefono</label>
-            <input type="text" id="telefono" name="telefono" />
-
-            <label htmlFor="mensaje">Mensaje</label>
-            <textarea name="mensaje" id="mensaje" cols="5" rows="7"></textarea>
-
-            <button>Enviar</button>
-          </form>
-        </div>
-      </div>
-
       <div className={styles.containMapa}>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d22337.144420865658!2d-65.4630018569037!3d-33.67176298687444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1680216398518!5m2!1ses!2sar"
@@ -49,12 +15,32 @@ export default function Contacto() {
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
+        <div className={styles.containInfo}>
+          <h2>Informacion</h2>
+
+          <h3>Ubicacion</h3>
+          <p>Avenida 25 de mayo 1850, Villa Mercedes, San Luis.</p>
+
+          <h3>Telefono</h3>
+          <p>11-65457823</p>
+
+          <h3>Email</h3>
+          <p>TriforceClub@gmail.com</p>
+        </div>
       </div>
 
       <div className={styles.containData}>
         <div className={styles.containCopy}>
-          <Image src={logo} alt="logo" />
-
+          <LogoFull />
+          <div>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Correo Electrónico"
+            />
+            <button>Suscribir</button>
+          </div>
           <p>
             Copyright © 2023 <br />
             Hecho por{" "}
@@ -72,16 +58,16 @@ export default function Contacto() {
           <h2>Nuestras Clases</h2>
           <ul>
             <li>
-              <p>Yoga</p>
+              <a>Yoga</a>
             </li>
             <li>
-              <p>Cardio</p>
+              <a>Cardio</a>
             </li>
             <li>
-              <p>Musculacion</p>
+              <a>Musculacion</a>
             </li>
             <li>
-              <p>Boxeo</p>
+              <a>Boxeo</a>
             </li>
           </ul>
         </div>

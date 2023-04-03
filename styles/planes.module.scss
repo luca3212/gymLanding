@@ -1,7 +1,7 @@
 .containPlanes{
-    width: 100%;
+   width: 100%;
    padding: 50px 0;
-   background: var(--bgDark);
+   background: var(--bgSeccion);
 }
 
 .titleSeccion{
@@ -11,7 +11,7 @@
 
     h1{
         font-size: 3.5rem;
-        margin-bottom: 10px ;
+        margin-bottom: 40px ;
     }
 }
 
@@ -19,86 +19,159 @@
     max-width: 1150px;
     margin: auto;
     width: 90%;
-
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    
-    
+     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .planes{
-    width: 100%;
-    border-bottom: 1px solid var(--greyDark);
-    
-    padding: 15px 0;
+    width: 30%;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    padding: 30px 0;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 35px;
+    gap: 25px;
+    background: rgb(56 55 55 / 20%);
+    transition: all 250ms ease-in-out;
 
     .titlePase{
-        width: 30%;
+        width: 100%;
         h2{
-            color: #111;
-            font-size: 10rem;
+            color: var(--greyLight);
+            font-size: 2rem;
+            text-transform: uppercase;
+            text-align: center;
         }
     }
     
     .infoPlan{
-        width: 30%;
+        width: 100%;
+        text-align: center;
         display: flex;
         justify-content: center;
-        align-items: center;
-        h2{
-            font-size: 3rem;
-            color: var(--greyDark);
-            
-        }
+        align-items: flex-end;
+        gap: 5px;
         strong{
-            font-size: 10rem;
+            font-size: 8rem;
+            line-height: 1;
         }
-        
+        h2{
+            font-size: 2rem;
+            line-height: 1;
+        }
     }
 
     .buttonPlan{
-        width: 30%;
+        width: 80%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 10px;
-
-
+        
         h2{
             font-size: 4rem;
         }
         button{
             border: none;
             background: var(--color-primary);
-            width: 80%;
+            width: 100%;
             border-radius: 2px;
-            padding: 20px 0;
+            padding: 15px;
             color: var(--bgDark);
             font-weight: 700;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             cursor: pointer;
     
             &:hover{
                 transform: translateY(2px);
             }
         }
-    
-        // .buttonPrimary{
-        //     background: var(--color-primary);
-        //     color: var(--bgDark);
-        //     font-weight: 500;
-        // }
     }
 
-
-    &:last-child{
-        border: none;
+    &:hover{
+        border: 1px solid var(--color-primary);
+        transform: scale(1.05);
     }
 }
 
+@media screen and (max-width: 1023px) {
+    .containPlanes{
+       padding: 0 0 50px 0;
+    }
+
+    .planes{
+        padding: 20px 0;
+        .titlePase,.infoPlan,.buttonPlan{
+            width: 90%;
+        }
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    .containCards{
+        flex-direction: column;
+        gap: 25px;
+    } 
+
+    .titleSeccion{
+        h1{
+            margin-bottom: 30px ;
+        }
+    }
+
+    .planes{
+        width: 100%;
+    }     
+}
+
+@media screen and (max-width: 425px) {
+    .titleSeccion{
+        h1{
+            font-size: 2.5rem;
+        }
+    }
+
+    .planes{
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0;
+        padding: 20px 10px;
+        .titlePase{
+            width: min-content;
+            h2{
+                font-size: 1rem;
+            }
+        }
+       
+        .infoPlan{
+            width: max-content;
+            h2{
+                font-size: 1rem;
+            }
+            strong{
+                font-size: 6rem;
+            }
+        }
+        
+        .buttonPlan{
+            width: 50%;
+            gap: 10px;
+            h2{
+                font-size: 2rem;
+            }
+
+            button{
+                width: 90%;
+                padding: 10px 0;
+                font-size: 1rem;
+            }
+        }
+
+        &:hover{
+            transform: scale(1);
+        }
+    }
+}

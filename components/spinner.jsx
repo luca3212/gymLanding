@@ -1,12 +1,12 @@
 import React from "react";
 import styles from "../styles/spinner.module.scss";
-import logo from "../public/imgGym/logo.png";
-import Image from "next/image";
+
+import LogoFull from "./logoFull";
 
 export default function Spinner() {
   return (
     <div className={styles.spinner}>
-      <Image src={logo} priority alt="logo" />
+      <LogoFull />
     </div>
   );
 }

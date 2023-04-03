@@ -89,52 +89,61 @@ export default function Imc() {
         />
       </div>
 
-      <div className={styles.titleSeccion}>
-        <h2>
-          Calculadora de <strong>IMC</strong>
-        </h2>
-      </div>
+      <div className={styles.containCentrar}>
+        <div className={styles.containTabla}>
+          <div className={styles.titleSeccion}>
+            <h2>
+              Calculadora de <strong>IMC</strong>
+            </h2>
+            <p>
+              Determine fácilmente su índice de masa corporal con nuestra
+              herramienta de cálculo precisa.
+            </p>
+          </div>
+        </div>
 
-      <div className={styles.containCalculo}>
-        <span className={styles.containForm}>
-          <label htmlFor="peso">Peso: (Kg)</label>
-          <input
-            type="number"
-            id="peso"
-            name="peso"
-            ref={inputPeso}
-            onChange={handleChange}
-          />
-        </span>
+        <div className={styles.containTabla}>
+          <div className={styles.containFila}>
+            <span className={styles.containForm}>
+              <label htmlFor="peso">Peso: (Kg)</label>
+              <input
+                type="number"
+                id="peso"
+                name="peso"
+                ref={inputPeso}
+                onChange={handleChange}
+              />
+            </span>
+            <span className={styles.containForm}>
+              <label htmlFor="altura">Altura: (Mts)</label>
+              <input
+                type="number"
+                id="altura"
+                name="altura"
+                ref={inputAltura}
+                onChange={handleChange}
+              />
+            </span>
+          </div>
 
-        <span className={styles.containForm}>
-          <label htmlFor="altura">Altura: (Mts)</label>
-          <input
-            type="number"
-            id="altura"
-            name="altura"
-            ref={inputAltura}
-            onChange={handleChange}
-          />
-        </span>
+          <div className={styles.containFila}>
+            <span className={styles.resultadoIMC}>
+              <p>
+                Su IMC es: <strong>{calculo.imc}</strong>
+              </p>
+            </span>
 
-        <span className={styles.containBotton}>
-          <button onClick={handleClick}>Calcular</button>
-        </span>
-      </div>
+            <span className={styles.resultadoIMC}>
+              <p>
+                Su peso es: <strong>{calculo.pesoCalculo}</strong>
+              </p>
+            </span>
+          </div>
 
-      <div className={styles.resultadoIMC}>
-        <span>
-          <p>
-            Su IMC es: <strong>{calculo.imc}</strong>
-          </p>
-        </span>
-
-        <span>
-          <p>
-            Su peso es: <strong>{calculo.pesoCalculo}</strong>
-          </p>
-        </span>
+          <div className={styles.containFila}>
+            <button onClick={handleClick}>Calcular</button>
+          </div>
+        </div>
       </div>
     </div>
   );

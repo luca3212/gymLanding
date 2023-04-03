@@ -2,7 +2,7 @@ import React from "react";
 
 import Image from "next/image";
 import styles from "../../styles/Instructores.module.scss";
-
+import Logo from "../logo";
 export default function Instructores() {
   return (
     <div className={styles.containInstructores}>
@@ -59,6 +59,10 @@ export default function Instructores() {
             <p>Yoga</p>
           </span>
         </div>
+      </div>
+
+      <div className={styles.decoBack}>
+        <Logo />
       </div>
     </div>
   );

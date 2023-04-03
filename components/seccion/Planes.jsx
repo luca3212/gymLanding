@@ -10,8 +10,9 @@ export default function Planes() {
       <div className={styles.containCards}>
         <div className={styles.planes}>
           <div className={styles.titlePase}>
-            <h2>PASE</h2>
+            <h2>Pase por</h2>
           </div>
+
           <div className={styles.infoPlan}>
             <h2>
               <strong>1</strong> Día
@@ -26,7 +27,7 @@ export default function Planes() {
 
         <div className={styles.planes}>
           <div className={styles.titlePase}>
-            <h2>PASE</h2>
+            <h2>Pase por</h2>
           </div>
           <div className={styles.infoPlan}>
             <h2>
@@ -42,7 +43,7 @@ export default function Planes() {
 
         <div className={styles.planes}>
           <div className={styles.titlePase}>
-            <h2>PASE</h2>
+            <h2>Pase por</h2>
           </div>
           <div className={styles.infoPlan}>
             <h2>

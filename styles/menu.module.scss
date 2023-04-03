@@ -26,8 +26,12 @@
         padding: 8px;
         color: #fff;
     }
+}
 
-    
+@media screen and (max-width: 425px) {
+    .infoMenu{
+        display: none;
+    }
 }
 
 

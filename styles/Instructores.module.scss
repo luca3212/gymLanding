@@ -1,28 +1,24 @@
 .containInstructores{
     width: 100%;
-    background: var(--bgLight);
     padding: 50px 0;
-   
+    position: relative;
 }
 
 .titleSeccion{
     max-width: 1150px;
     margin: auto;
     width: 90%;
-
     h1{
         font-size: 3.5rem;
         margin-bottom: 100px ;
         color: var(--bgDark);
     }
-   
 }
 
 .containTrainers{
     max-width: 1150px;
     margin: auto;
     width: 90%;
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -35,14 +31,14 @@
     transition: all 200ms ease-in;
     overflow: hidden;
     position: relative;
+    display: flex;
+    box-shadow: 5px 5px 10px 0px #838383;
+    align-items: stretch;
+    justify-content: center;
     
     img{
         height: max-content;
         max-width: 100%;
-        object-fit: contain;
-
-        
-        
     }
 
     .nameTrainer{
@@ -71,5 +67,61 @@
         .nameTrainer{
            transform: translateY(0);
         }
+    }
+}
+
+.decoBack{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    z-index: -1;
+}
+
+@media screen and (max-width:1024px) {
+    .decoBack{
+        right: 5%;
+        svg{
+            width: 200px;
+            height: 200px;
+        }
+    }
+}
+
+@media screen and (max-width:767px) {
+    .containTrainers{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 30px;
+        grid-row-gap: 30px;
+    }
+
+    .titleSeccion{
+        h1{
+            font-size: 2.5rem;
+            margin-bottom: 30px ;
+        }
+    }
+    
+    .imgTrainers{
+        width: 100%;
+        filter: grayscale(0);
+        .nameTrainer{
+            margin-bottom: 10px;
+            padding: 2px 0;
+            h3{
+               font-size: 1rem;
+            }
+            p{
+                font-size: 12px;
+                color: var(--bgDark);
+            }
+            transform: translateY(0);
+        }
+    }
+
+    .decoBack{
+        right: 25%;
+        top: 40%;
     }
 }

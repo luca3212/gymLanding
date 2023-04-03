@@ -4,11 +4,11 @@
     bottom: 0;
     right: 0;
     left: 0;
-    z-index: 5;
+    z-index: 80;
     background: rgba(0,0,0,1);
     display: grid;
     place-content: center;
-    img{
+    svg{
         opacity: 1;
         animation: fade 1s ease-in-out infinite alternate;
     }

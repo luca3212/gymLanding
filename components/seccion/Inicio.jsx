@@ -4,7 +4,7 @@ import styles from "../../styles/inicio.module.scss";
 import Image from "next/image";
 import fondo from "../../public/imgGym/inicio.jpg";
 
-export default function Inicio() {
+export default function Inicio({ onLoadingComplete }) {
   return (
     <div className={styles.containInicio}>
       <div className={styles.containText}>
@@ -20,7 +20,12 @@ export default function Inicio() {
       </div>
 
       <div className={styles.fondoInicio}>
-        <Image src={fondo} priority alt="fondo inicio" />
+        <Image
+          src={fondo}
+          priority
+          alt="fondo inicio"
+          onLoadingComplete={onLoadingComplete}
+        />
       </div>
     </div>
   );

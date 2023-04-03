@@ -1,15 +1,14 @@
-import Image from "next/image";
 import React from "react";
-
-import logo from "../public/imgGym/logo.png";
 import styles from "../styles/menu.module.scss";
+
+import LogoFull from "./logoFull";
 
 export default function Menu() {
   return (
     <div className={styles.containMenu}>
       <div className={styles.centerMenu}>
         <div>
-          <Image src={logo} height={35} width={216} priority alt="logo" />
+          <LogoFull />
         </div>
         <div className={styles.infoMenu}>
           <p>WhatsApp: 11-65457823</p>

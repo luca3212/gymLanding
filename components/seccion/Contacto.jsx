@@ -42,10 +42,10 @@ export default function Contacto() {
             <button>Suscribir</button>
           </div>
           <p>
-            Copyright © 2023 <br />
+            Copyright © 2024 <br />
             Hecho por{" "}
             <Link
-              href="https://agueroluca.com.ar/"
+              href="https://www.agueroluca.site/"
               target="_blank"
               rel="noreferrer"
               className={styles.link}
